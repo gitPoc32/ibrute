@@ -76,14 +76,20 @@ def TryPass(apple_id,password):
 	return 'bad'
 
 
-file = open('passlist.txt','r')
-passwords = file.read()
-file.close()
+# Access to file
+#file = open('passlist.txt','r')
+#passwords = file.read()
+#file.close()
+
+#file = open('mails.txt','r')
+#apple_ids = file.read()
+#file.close()
 
 
-file = open('mails.txt','r')
-apple_ids = file.read()
-file.close()
+with open('passlist.txt', 'r') as file:
+ passwords = file.read()
+with open('mails.txt', 'r') as file:
+ apple_ids = file.read()
 
 
 
